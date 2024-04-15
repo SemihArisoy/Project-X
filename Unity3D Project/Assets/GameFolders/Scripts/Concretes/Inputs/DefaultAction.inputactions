@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "LeftRight",
+                    "type": "PassThrough",
+                    "id": "1aefe515-6501-4bb0-bf65-fc1ece13b0d2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -26,6 +35,39 @@
                     "action": "ForceUp",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "AD",
+                    "id": "02549346-1b1e-403d-9e3e-a9e5c55443b2",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRight",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "d1dedd22-e2d7-4931-8bc5-700ae6c8967c",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRight",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "8e32f6ed-cb75-4de3-b4db-b92c137ae78d",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRight",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

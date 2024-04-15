@@ -854,7 +854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3512803211032133244, guid: 35436c2b2135a554a8518ed6e6763398, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8590002
+      value: 0.53900003
       objectReference: {fileID: 0}
     - target: {fileID: 3512803211032133244, guid: 35436c2b2135a554a8518ed6e6763398, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1001,7 +1001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2398626350113856244, guid: 3e2451fd7bbd0c24eb4dadc3695373d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.65
+      value: -2.32
       objectReference: {fileID: 0}
     - target: {fileID: 2398626350113856244, guid: 3e2451fd7bbd0c24eb4dadc3695373d6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1035,14 +1035,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3127634028983395516, guid: 3e2451fd7bbd0c24eb4dadc3695373d6, type: 3}
-      propertyPath: m_Mass
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 3127634028983395516, guid: 3e2451fd7bbd0c24eb4dadc3695373d6, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3790529194139664289, guid: 3e2451fd7bbd0c24eb4dadc3695373d6, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1055,6 +1047,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 811207336}
+    - target: {fileID: 8142198968948067704, guid: 3e2451fd7bbd0c24eb4dadc3695373d6, type: 3}
+      propertyPath: _turnSpeed
+      value: 60.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1144,7 +1140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6873815522171860619, guid: 3534b397f584a5049845c4583efe4bd1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8590002
+      value: 0.53900003
       objectReference: {fileID: 0}
     - target: {fileID: 6873815522171860619, guid: 3534b397f584a5049845c4583efe4bd1, type: 3}
       propertyPath: m_LocalPosition.z
