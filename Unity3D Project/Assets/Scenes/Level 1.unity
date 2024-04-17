@@ -931,10 +931,6 @@ PrefabInstance:
       value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5029704217904553409, guid: 54c123e03e9c57844a6d52a3e169921f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5029704217904553409, guid: 54c123e03e9c57844a6d52a3e169921f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
       objectReference: {fileID: 0}
@@ -972,10 +968,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5029704217904553409, guid: 54c123e03e9c57844a6d52a3e169921f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5029704217904553409, guid: 54c123e03e9c57844a6d52a3e169921f, type: 3}
-      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
