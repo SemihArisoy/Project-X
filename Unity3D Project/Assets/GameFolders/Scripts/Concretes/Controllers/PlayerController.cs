@@ -4,6 +4,8 @@ using Unity.VisualScripting;
 using Unity3DProject.Inputs;
 using Unity3DProject.Movements;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Assertions.Must;
 
 namespace Unity3DProject.Controllers
 {
@@ -15,8 +17,9 @@ namespace Unity3DProject.Controllers
         DefaultInput _input;
         Mover _mover;
         Rotator _rotator;
+        Fuel _fuel;
 
-        bool _isForceUp;
+        bool _canForceUp;
         float _leftRight;
 
         public float TurnSpeed => _turnSpeed;
@@ -27,17 +30,20 @@ namespace Unity3DProject.Controllers
             _input = new DefaultInput();
             _mover = new Mover(this);
             _rotator = new Rotator(this);
+            _fuel = GetComponent<Fuel>();
         }
 
         private void Update()
         {
-            if (_input.IsForceUp) 
+            if (_input.IsForceUp && !_fuel.IsEmpty) 
             {
-                _isForceUp = true;
+                _canForceUp = true;
             }
+
             else
             {
-                _isForceUp = false;
+                _canForceUp = false;
+                _fuel.FuelIncrease(0.1f);
             }
 
             _leftRight = _input.LeftRight;
@@ -45,9 +51,10 @@ namespace Unity3DProject.Controllers
 
         private void FixedUpdate()
         {
-            if (_isForceUp)
+            if (_canForceUp)
             {
                 _mover.FixedTick();
+                _fuel.FuelDecrease(0.2f);
             }
 
             _rotator.FixedTick(_leftRight);
