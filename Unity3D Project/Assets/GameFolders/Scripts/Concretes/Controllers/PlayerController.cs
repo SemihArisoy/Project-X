@@ -18,6 +18,7 @@ namespace Unity3DProject.Controllers
         Mover _mover;
         Rotator _rotator;
         Fuel _fuel;
+        StartFloorController _startFire;
 
         bool _canForceUp;
         float _leftRight;
@@ -31,6 +32,7 @@ namespace Unity3DProject.Controllers
             _mover = new Mover(this);
             _rotator = new Rotator(this);
             _fuel = GetComponent<Fuel>();
+            _startFire = GetComponent<StartFloorController>();
         }
 
         private void Update()
