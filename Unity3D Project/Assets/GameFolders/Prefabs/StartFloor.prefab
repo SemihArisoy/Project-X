@@ -28821,3 +28821,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1431e115d6f4bd43b5a008e42eecc0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startFire: {fileID: 0}
