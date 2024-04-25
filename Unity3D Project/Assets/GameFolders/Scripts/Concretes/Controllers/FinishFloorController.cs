@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity3DProject.Managers;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,7 +27,7 @@ namespace Unity3DProject.Controllers
             else
             {
                 //Game Over
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                GameManager.Instance.GameOver();
             }
         }
     }

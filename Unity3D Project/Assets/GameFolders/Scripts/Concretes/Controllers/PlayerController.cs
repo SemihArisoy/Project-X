@@ -6,6 +6,7 @@ using Unity3DProject.Movements;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Assertions.Must;
+using Unity3DProject.Managers;
 
 namespace Unity3DProject.Controllers
 {
@@ -14,13 +15,16 @@ namespace Unity3DProject.Controllers
 
         [SerializeField] float _turnSpeed = 10f;
         [SerializeField] float _force = 55f;
+        [SerializeField] GameObject _startLight;
         DefaultInput _input;
         Mover _mover;
         Rotator _rotator;
         Fuel _fuel;
         StartFloorController _startFire;
 
+        bool _canMove;
         bool _canForceUp;
+        
         float _leftRight;
 
         public float TurnSpeed => _turnSpeed;
@@ -35,8 +39,26 @@ namespace Unity3DProject.Controllers
             _startFire = GetComponent<StartFloorController>();
         }
 
+        private void Start()
+        {
+            _canMove = true;
+            
+        }
+
+        private void OnEnable()
+        {
+            GameManager.Instance.OnGameOver += HandleOnEventTriggered;
+        }
+
+        private void OnDisable()
+        {
+            GameManager.Instance.OnGameOver -= HandleOnEventTriggered;
+        }
+
         private void Update()
         {
+            if (!_canMove) return;
+
             if (_input.IsForceUp && !_fuel.IsEmpty) 
             {
                 _canForceUp = true;
@@ -60,6 +82,14 @@ namespace Unity3DProject.Controllers
             }
 
             _rotator.FixedTick(_leftRight);
+        }
+        private void HandleOnEventTriggered()
+        {
+            _canMove = false;
+            _canForceUp = false;
+            _leftRight = 0f;
+            _fuel.FuelIncrease(0f);
+            _startLight.gameObject.SetActive(false);
         }
     }
 }
