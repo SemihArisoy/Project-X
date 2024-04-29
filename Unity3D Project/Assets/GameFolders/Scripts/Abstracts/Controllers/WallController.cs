@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+using Unity3DProject.Controllers;
 using Unity3DProject.Managers;
-using UnityEditor.SearchService;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
-namespace Unity3DProject.Controllers
+
+namespace Unity3DProject.Abstracts.Controllers
 {
-    public class WallController : MonoBehaviour
+    public abstract class WallController : MonoBehaviour
     {
         private void OnCollisionEnter(Collision other)
         {
@@ -19,8 +17,6 @@ namespace Unity3DProject.Controllers
                 GameManager.Instance.GameOver();
             }
         }
-
-
     }
 }
 
