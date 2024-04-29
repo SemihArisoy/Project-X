@@ -385,6 +385,10 @@ PrefabInstance:
       propertyPath: m_fontColorGradient.bottomRight.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3312565960196543556, guid: c6084874972b87647bf8507795cf7f69, type: 3}
+      propertyPath: m_Color.g
+      value: 0.908684
+      objectReference: {fileID: 0}
     - target: {fileID: 3531445136147385404, guid: c6084874972b87647bf8507795cf7f69, type: 3}
       propertyPath: m_text
       value: EXIT
@@ -480,6 +484,10 @@ PrefabInstance:
     - target: {fileID: 3531445136147385404, guid: c6084874972b87647bf8507795cf7f69, type: 3}
       propertyPath: m_fontColorGradient.bottomRight.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3936581572996330418, guid: c6084874972b87647bf8507795cf7f69, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3936581572996330418, guid: c6084874972b87647bf8507795cf7f69, type: 3}
       propertyPath: m_Color.b
