@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1664907196589537323, guid: 54c123e03e9c57844a6d52a3e169921f, type: 3}
       propertyPath: m_Name
-      value: Wall
+      value: StaticWall
       objectReference: {fileID: 0}
     - target: {fileID: 5029704217904553409, guid: 54c123e03e9c57844a6d52a3e169921f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55,5 +55,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1664907196589537323, guid: 54c123e03e9c57844a6d52a3e169921f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7176202226969937822}
   m_SourcePrefab: {fileID: 100100000, guid: 54c123e03e9c57844a6d52a3e169921f, type: 3}
+--- !u!1 &7075467411276688240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1664907196589537323, guid: 54c123e03e9c57844a6d52a3e169921f, type: 3}
+  m_PrefabInstance: {fileID: 8443101796390015835}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-7176202226969937822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075467411276688240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b45e4a5b965b045933e68938306e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
