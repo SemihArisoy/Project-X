@@ -10,9 +10,10 @@ namespace Unity3DProject.Movements
 
         [SerializeField] float _maxFuel = 100f;
         [SerializeField] float _currentFuel;
-        [SerializeField] ParticleSystem _particleSystem;
+        [SerializeField] public ParticleSystem _particleSystem;
 
         public bool IsEmpty => _currentFuel < 0.1f;
+        public float CurrentFuel => _currentFuel / _maxFuel;
 
         private void Awake()
         {

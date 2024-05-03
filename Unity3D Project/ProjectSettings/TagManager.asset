@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FxTemporaire
   - isik
+  - FuelStation
   layers:
   - Default
   - TransparentFX

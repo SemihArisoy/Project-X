@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using Unity3DProject.Inputs;
 using Unity3DProject.Movements;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Assertions.Must;
+
 using Unity3DProject.Managers;
 
 namespace Unity3DProject.Controllers
@@ -21,6 +17,7 @@ namespace Unity3DProject.Controllers
         Rotator _rotator;
         Fuel _fuel;
         StartFloorController _startFire;
+        RefuelStationController _refuelStation;
 
         bool _canMove;
         bool _canForceUp;
@@ -39,6 +36,7 @@ namespace Unity3DProject.Controllers
             _rotator = new Rotator(this);
             _fuel = GetComponent<Fuel>();
             _startFire = GetComponent<StartFloorController>();
+            _refuelStation = GetComponent<RefuelStationController>();
         }
 
         private void Start()
@@ -71,10 +69,15 @@ namespace Unity3DProject.Controllers
             else
             {
                 _canForceUp = false;
-                _fuel.FuelIncrease(0.1f);
+                _fuel._particleSystem.Stop();
             }
 
             _leftRight = _input.LeftRight;
+
+            if (_refuelStation._touch)
+            {
+                _fuel.FuelIncrease(0.05f);
+            }
         }
 
         private void FixedUpdate()
