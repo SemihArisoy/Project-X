@@ -16,7 +16,6 @@ namespace Unity3DProject.Controllers
         Mover _mover;
         Rotator _rotator;
         Fuel _fuel;
-        StartFloorController _startFire;
         RefuelStationController _refuelStation;
 
         bool _canMove;
@@ -35,7 +34,6 @@ namespace Unity3DProject.Controllers
             _mover = new Mover(this);
             _rotator = new Rotator(this);
             _fuel = GetComponent<Fuel>();
-            _startFire = GetComponent<StartFloorController>();
             _refuelStation = GetComponent<RefuelStationController>();
         }
 
@@ -66,6 +64,12 @@ namespace Unity3DProject.Controllers
                 _canForceUp = true;
             }
 
+            else if (_refuelStation._touch)
+            {
+                _fuel._particleSystem.Stop();
+                _fuel.FuelIncrease(0.4f);
+            }
+
             else
             {
                 _canForceUp = false;
@@ -74,10 +78,7 @@ namespace Unity3DProject.Controllers
 
             _leftRight = _input.LeftRight;
 
-            if (_refuelStation._touch)
-            {
-                _fuel.FuelIncrease(0.05f);
-            }
+ 
         }
 
         private void FixedUpdate()

@@ -1,32 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using Unity3DProject.Abstracts.Utilities;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Unity3DProject.Managers
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : SingletonThisObject<GameManager>
     {
         public event System.Action OnGameOver;
         public event System.Action OnMissionSucced;
-        public static GameManager Instance { get; private set; }
 
         private void Awake()
         {
-            SingletonThisGameObject();
-        }
-
-        private void SingletonThisGameObject()
-        {
-            if (Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(this.gameObject);
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }
+            SingletonThisGameObject(this);
         }
 
         public void GameOver()
@@ -41,10 +29,13 @@ namespace Unity3DProject.Managers
         public void LoadLevelScene(int levelIndex = 0)
         {
             StartCoroutine(LoadLevelSceneAsync(levelIndex));
+
         }
 
         private IEnumerator LoadLevelSceneAsync(int levelIndex)
         {
+            SoundManager.Instance.StopSound(0);
+            //SoundManager.Instance.PlayNextSong();
             yield return SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex +  levelIndex);
         }
 
@@ -55,7 +46,9 @@ namespace Unity3DProject.Managers
         
         private IEnumerator LoadMenuSceneAsync()
         {
+            SoundManager.Instance.PlaySound(0);
             yield return SceneManager.LoadSceneAsync("Menu");
+            SoundManager.Instance.StopGameMusic();
         }
         public void Exit()
         {

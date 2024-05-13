@@ -986,6 +986,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2864558944567598733, guid: 9f2741a90e8cb9f4bb0bb4210f664f8b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667520594566608721, guid: 9f2741a90e8cb9f4bb0bb4210f664f8b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667520594566608721, guid: 9f2741a90e8cb9f4bb0bb4210f664f8b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4780764248770316906, guid: 9f2741a90e8cb9f4bb0bb4210f664f8b, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -994,11 +1006,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6618945568355393531, guid: 9f2741a90e8cb9f4bb0bb4210f664f8b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124636986722513090, guid: 9f2741a90e8cb9f4bb0bb4210f664f8b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8492739183970825168, guid: 9f2741a90e8cb9f4bb0bb4210f664f8b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 629625136629337952, guid: 9f2741a90e8cb9f4bb0bb4210f664f8b, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 1026872093953090531}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f2741a90e8cb9f4bb0bb4210f664f8b, type: 3}

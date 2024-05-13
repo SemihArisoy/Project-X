@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 531744031389168985, guid: 54c123e03e9c57844a6d52a3e169921f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 810d6e4053861e14786e015b47fb058f, type: 2}
     - target: {fileID: 1664907196589537323, guid: 54c123e03e9c57844a6d52a3e169921f, type: 3}
       propertyPath: m_Name
       value: MoverWall
@@ -79,4 +83,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _direction: {x: 0, y: 0, z: 0}
-  _factor: 0
+  _speed: 1

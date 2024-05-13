@@ -10,11 +10,13 @@ namespace Unity3DProject.UIs
         public void YesClicked()
         {
             GameManager.Instance.LoadLevelScene();
+            SoundManager.Instance.VolumeUp(1f);
         }
 
         public void NoClicked()
         {
             GameManager.Instance.LoadMenuScene();
+            SoundManager.Instance.VolumeUp(1f);
         }
     }
 }
